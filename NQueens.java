@@ -34,7 +34,7 @@ public class NQueens
             }
         }
 
-        //Diagonal check
+        //Diagonal check, only checks up left and up right respectively
         for (int r = row, c = col; r >= 0 && c >= 0; r--, c--) {
             if (board[r][c] == 1){
                 return false;
@@ -56,7 +56,7 @@ public class NQueens
             printToConsole();
             return true;
         }
-
+//      For loop is for column value and recursion at each space and checks if the next row is valid
         for(int i = 0; i < size; i++)
         {
             if(Qcheck(row, i))
